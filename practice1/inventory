@@ -1,0 +1,2 @@
+[target]
+localhost ansible_ssh_user=<ssh username> ansible_ssh_pass=<ssh password>
