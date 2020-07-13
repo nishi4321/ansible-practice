@@ -1,2 +1,2 @@
 # ansible-practice
-Ansible入門の残骸
+Ansible入門の残骸です。
