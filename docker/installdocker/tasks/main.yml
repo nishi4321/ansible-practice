@@ -1,0 +1,18 @@
+---
+# tasks file for installdocker
+- name: Get script file.
+  get_url: url="https://get.docker.com" dest=get-docker.sh
+
+- name: Run script.
+  shell: "sh get-docker.sh"
+  become: true
+  changed_when: no  
+
+- name: get username
+  shell: whoami
+  register: username
+  changed_when: no
+
+- name: Add user to group.
+  become: true
+  user: name={{ username.stdout }} groups=docker append=yes
