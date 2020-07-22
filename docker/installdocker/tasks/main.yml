@@ -1,7 +1,9 @@
 ---
 # tasks file for installdocker
 - name: Get script file.
-  get_url: url="https://get.docker.com" dest=get-docker.sh
+  get_url:
+    url: "https://get.docker.com"
+    dest: "~/get-docker.sh"
 
 - name: Run script.
   shell: "sh get-docker.sh"
